@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageUpload_With_ProgressBar_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LBU-3o-HRM">
+                                <rect key="frame" x="0.0" y="85" width="375" height="225"/>
+                                <color key="backgroundColor" red="0.74177109770000005" green="0.74177109770000005" blue="0.74177109770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNj-Tf-2AB">
+                                <rect key="frame" x="154" y="318" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="psQ-Ay-amy">
+                                <rect key="frame" x="16" y="356" width="343" height="2"/>
+                                <color key="backgroundColor" red="0.74177109770000005" green="0.74177109770000005" blue="0.74177109770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="progressTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="trackTintColor" red="0.74177109770000005" green="0.74177109770000005" blue="0.74177109770000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6c-ui-fqU">
+                                <rect key="frame" x="121" y="389" width="132" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="BTN_Upload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ftO-Av-gBM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k6c-ui-fqU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3o4-l7-DnG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="k6c-ui-fqU" secondAttribute="bottom" constant="354" id="4Uu-EP-e5s"/>
+                            <constraint firstItem="LBU-3o-HRM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="HDQ-TO-Ugn"/>
+                            <constraint firstItem="LBU-3o-HRM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qau-Fu-wWq"/>
+                            <constraint firstItem="jNj-Tf-2AB" firstAttribute="top" secondItem="LBU-3o-HRM" secondAttribute="bottom" constant="8" symbolic="YES" id="QfA-X3-6jE"/>
+                            <constraint firstItem="k6c-ui-fqU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="Ul7-yz-2yQ"/>
+                            <constraint firstItem="LBU-3o-HRM" firstAttribute="centerX" secondItem="jNj-Tf-2AB" secondAttribute="centerX" id="Yxi-TZ-sVh"/>
+                            <constraint firstItem="psQ-Ay-amy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bV2-4M-4l7"/>
+                            <constraint firstItem="psQ-Ay-amy" firstAttribute="top" secondItem="jNj-Tf-2AB" secondAttribute="bottom" constant="17" id="ceY-a4-gkE"/>
+                            <constraint firstItem="jNj-Tf-2AB" firstAttribute="centerX" secondItem="psQ-Ay-amy" secondAttribute="centerX" id="dU0-sz-6qN"/>
+                            <constraint firstAttribute="trailing" secondItem="LBU-3o-HRM" secondAttribute="trailing" id="goi-Je-oom"/>
+                            <constraint firstItem="psQ-Ay-amy" firstAttribute="centerX" secondItem="k6c-ui-fqU" secondAttribute="centerX" id="grp-zh-vjl"/>
+                            <constraint firstItem="jNj-Tf-2AB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="t4N-1e-9MR"/>
+                            <constraint firstItem="k6c-ui-fqU" firstAttribute="top" secondItem="psQ-Ay-amy" secondAttribute="bottom" constant="31" id="vxu-XZ-LS7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="BTN" destination="k6c-ui-fqU" id="tsf-XX-hlZ"/>
+                        <outlet property="IMGView" destination="LBU-3o-HRM" id="KAf-17-QqJ"/>
+                        <outlet property="LBL" destination="jNj-Tf-2AB" id="8Rg-6H-KHO"/>
+                        <outlet property="Progress" destination="psQ-Ay-amy" id="uYr-QI-BOX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="-19"/>
+        </scene>
+    </scenes>
+</document>
